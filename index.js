@@ -59,7 +59,7 @@ function sortedProducts2(ele1,ele2){
   return ele1.price-ele2.price;
 };
 app.get("/products/sort/price-low-to-high",(req,res)=>{
-  let arrCp=products.slice
+  let arrCp=products.slice();
   let sortedProducts=arrCp.sort(sortedProducts2);
   res.json({products:sortedProducts});
 });
