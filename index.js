@@ -43,7 +43,7 @@ app.get("/products/sort/popularity",(req,res)=>{
   res.json({ products: sortedProducts });
   // res.json(arrCp.sort(sortedProducts));
 });
-
+//checking
 //endpoint 2: Get the products sorted by “high-to-low” price
 function sortedProductsByPrice(ele1,ele2){
   return ele2.price-ele1.price;
