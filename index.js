@@ -54,6 +54,15 @@ app.get("/products/sort/price-high-to-low",(req,res)=>{
   res.json({ products: sortedProducts });
   // res.json(arrCp.sort(sortedProductsByPrice));
 });
+//Endpoint 3: Get the products sorted by “low-to-high” price
+function sortedProducts2(ele1,ele2){
+  return ele1.price-ele2.price;
+};
+app.get("/products/sort/price-low-to-high",(req,res)=>{
+  let arrCp=products.slice
+  let sortedProducts=arrCp.sort(sortedProducts2);
+  res.json({products:sortedProducts});
+});
 
 //Endpoint 4: Filter the products based on the “RAM” option
 function filterByRam(prObj,rval){
